@@ -35,7 +35,6 @@
                 @enderror
             </div>
 
-
             <div class="d-flex gap-2 mb-3">
                 @if (Str::startsWith($project->image, 'https://'))
                     <img width="140" src="{{ $project->image }}" alt="{{ $project->title }}">
@@ -54,6 +53,30 @@
                         </div>
                     @enderror
                 </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="type_id" class="form-label">Type</label>
+                <select class="form-select" name="type_id" id="type_id">
+                    <option selected disabled>Select a Category</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>
+                            {{ $type->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" id="date"
+                    aria-describedby="dateHelper" value="{{ old('date') }}" />
+                <small id="dateHelper" class="form-text text-muted">Enter the date of this project</small>
+                @error('date')
+                    <div class="text-danger py-2">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
 
             <div class="mb-3">
