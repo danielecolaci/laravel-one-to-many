@@ -56,6 +56,7 @@
                         </option>
                     @endforeach
                 </select>
+                <a href="{{ route('admin.types.index') }}" class="btn btn-primary mt-2">Manage Types</a>
             </div>
 
             <div class="mb-3">
