@@ -10,6 +10,8 @@ class Type extends Model
 {
     use HasFactory;
 
+    protected $table = 'types';
+
     protected $fillable = [
         'name',
         'slug',

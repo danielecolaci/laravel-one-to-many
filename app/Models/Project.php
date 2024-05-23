@@ -17,6 +17,8 @@ class Project extends Model
         'image',
         'url_code',
         'url_web',
+        'date',
+        'type_id'
     ];
 
     /**

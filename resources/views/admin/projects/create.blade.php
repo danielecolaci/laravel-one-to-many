@@ -52,10 +52,22 @@
                     <option selected disabled>Select a Category</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>
-                            {{ $type->name }}</option>
+                            {{ $type->name }}
+                        </option>
                     @endforeach
-
                 </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" id="date"
+                    aria-describedby="dateHelper" value="{{ old('date') }}" />
+                <small id="dateHelper" class="form-text text-muted">Enter the date of this project</small>
+                @error('date')
+                    <div class="text-danger py-2">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
 
             <div class="mb-3">
