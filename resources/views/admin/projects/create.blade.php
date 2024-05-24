@@ -1,9 +1,13 @@
 @extends('layouts.admin')
 
+@section('title', 'Create New Project')
+
 @section('content')
     <div class="container py-5">
 
         @include('partials.validation-message')
+
+        <h4 class="text-muted mb-3">Create New Project</h4>
 
         <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -56,7 +60,7 @@
                         </option>
                     @endforeach
                 </select>
-                <a href="{{ route('admin.types.index') }}" class="btn btn-primary mt-2">Manage Types</a>
+                <a href="{{ route('admin.types.index') }}" class="btn btn-info text-white mt-2">Manage Types</a>
             </div>
 
             <div class="mb-3">
@@ -108,7 +112,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-info text-white">Create</button>
         </form>
     </div>
 @endsection

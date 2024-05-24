@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+@section('title', 'Manage Projects')
+
 @section('content')
     <section class="py-5">
         <div class="container">

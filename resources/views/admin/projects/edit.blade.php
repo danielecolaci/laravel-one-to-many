@@ -1,10 +1,14 @@
 @extends('layouts.admin')
 
+@section('title', "Edit $project->title")
+
 @section('content')
     <div class="container py-5">
 
         @include('partials.validation-message')
         @include('partials.session-message')
+
+        <h4 class="text-muted">Edit Project</h4>
 
         <form action="{{ route('admin.projects.update', $project) }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -65,7 +69,7 @@
                         </option>
                     @endforeach
                 </select>
-                <a href="{{ route('admin.types.index') }}" class="btn btn-primary mt-2">Manage Types</a>
+                <a href="{{ route('admin.types.index') }}" class="btn btn-info text-white mt-2">Manage Types</a>
             </div>
 
             <div class="mb-3">
@@ -118,7 +122,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-info text-white">Update</button>
             <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary mx-3">Back</a>
         </form>
     </div>

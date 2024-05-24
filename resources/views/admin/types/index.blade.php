@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Types</h1>
-        <a href="{{ route('admin.types.create') }}" class="btn btn-primary mb-3">Create New Type</a>
+        <a href="{{ route('admin.types.create') }}" class="btn btn-info text-white mb-3">Create New Type</a>
 
         <table class="table">
             <thead>
@@ -19,7 +19,8 @@
                         <td>{{ $type->name }}</td>
                         <td>{{ $type->slug }}</td>
                         <td>
-                            <a href="{{ route('admin.types.edit', $type->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('admin.types.edit', $type->id) }}"
+                                class="btn btn-sm btn-info text-white">Edit</a>
                             <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
