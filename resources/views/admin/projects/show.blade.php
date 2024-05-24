@@ -3,7 +3,7 @@
 @section('content')
     <section class="py-5">
         <div class="container">
-            <a href="{{ route('admin.projects.index') }}" class="btn btn-primary btn-sm mb-5">Back</a>
+            <button class="btn btn-primary btn-sm mb-5" onclick="history.back()">Back</button>
             <div class="card">
                 <div class="card-body">
 

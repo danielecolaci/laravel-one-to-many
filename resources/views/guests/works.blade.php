@@ -8,8 +8,12 @@
                 <div class="col-md-12 mb-4">
                     <div class="card">
                         <div class="row g-0">
+
                             <div class="col-md-4">
-                                <img src="{{ asset($project->image) }}" class="card-img-top h-100 alt="{{ $project->title }}">
+                                <a href="{{ route('admin.projects.show', $project) }}">
+                                    <img src="{{ asset($project->image) }}"
+                                        class="card-img-top h-100 alt="{{ $project->title }}">
+                                </a>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
