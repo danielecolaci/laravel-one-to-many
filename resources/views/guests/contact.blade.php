@@ -20,7 +20,7 @@
                 <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-5">Send Message</button>
+            <button type="submit" class="btn btn-info mt-5">Send Message</button>
         </form>
     </div>
 @endsection

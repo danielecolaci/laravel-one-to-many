@@ -3,8 +3,8 @@
 @section('content')
     <section class="py-5">
         <div class="container">
-            <div class="mb-4">
-                <a href="{{ route('admin.projects.create') }}" class="btn btn-success">Create New Project</a>
+            <div class="mb-4 d-flex justify-content-center">
+                <a href="{{ route('admin.projects.create') }}" class="btn btn-info text-white w-25">Create New Project</a>
             </div>
             <h4 class="text-muted">All Projects</h4>
 
@@ -29,9 +29,9 @@
                                 <p class="card-text">{{ Str::limit($project->description, 100) }}</p>
                                 <p class="card-text"><small class="text-muted">{{ $project->url_code }}</small></p>
                                 <a href="{{ route('admin.projects.show', $project) }}"
-                                    class="btn btn-primary btn-sm">Show</a>
+                                    class="btn btn-info text-white btn-sm">Show</a>
                                 <a href="{{ route('admin.projects.edit', $project) }}"
-                                    class="btn btn-warning btn-sm">Edit</a>
+                                    class="btn btn-info text-white btn-sm">Edit</a>
                                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#modal-{{ $project->id }}">
                                     Delete</button>
