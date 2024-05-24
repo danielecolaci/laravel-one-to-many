@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h1>Contact Me</h1>
+        <h1 class="my-5">Contact Me</h1>
         <form>
 
             <div class="mb-3">

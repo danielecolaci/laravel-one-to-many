@@ -17,12 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('guests.welcome');
 });
 
 Route::get('/works', function () {
-    return view('guests.works');
+    $projects = \App\Models\Project::all();
+    return view('guests.works', compact('projects'));
 });
 
 Route::get('/contact', function () {
